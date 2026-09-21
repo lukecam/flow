@@ -600,8 +600,8 @@
     "forcedColors": "transparent"
   },
   "toolbox/background/gradient": {
-    "light": "linear-gradient(96deg, color-mix({Primitives$toolbox/background/color/gradient-leading} 50%, transparent) 39.84%, color-mix({Primitives$toolbox/background/color/gradient-trailing} 50%, transparent) 101.72%)",
-    "dark": "linear-gradient(96deg, color-mix({Primitives$toolbox/background/color/gradient-leading} 50%, transparent) 39.84%, color-mix({Primitives$toolbox/background/color/gradient-trailing} 50%, transparent) 101.72%)",
+    "light": "#0d0d12",
+    "dark": "#0d0d12",
     "forcedColors": "image(transparent)"
   },
   "badge/background/color/filled": {

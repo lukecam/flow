@@ -1514,11 +1514,11 @@ pref("accessibility.typeaheadfind.linksonly", false);
 pref("accessibility.typeaheadfind.flashBar", 1);
 
 // Whether we had to hide the "Firefox Labs" section because it would be empty.
-pref("browser.preferences.experimental.hidden", false);
+pref("browser.preferences.experimental.hidden", true);
 // Whether we show the "More from Mozilla" section.
-pref("browser.preferences.moreFromMozilla", true);
+pref("browser.preferences.moreFromMozilla", false);
 // Whether we show the "AI Controls" pane.
-pref("browser.preferences.aiControls", true);
+pref("browser.preferences.aiControls", false);
 // Whether to show unavailable AI controls regardless of region/locale
 // restrictions. This is intended for localizers to be able to see the strings.
 pref("browser.preferences.aiControls.showUnavailable", false);
