@@ -71,7 +71,7 @@ pref("extensions.webextensions.pageActionIconDarkModeFilter.enabled", false);
 
 // Require signed add-ons by default
 pref("extensions.langpacks.signatures.required", true);
-pref("xpinstall.signatures.required", true);
+pref("xpinstall.signatures.required", false);
 
 // Enable data collection permissions.
 pref("extensions.dataCollectionPermissions.enabled", true);
@@ -243,7 +243,7 @@ pref("extensions.update.interval", 86400);  // Check for updates to Extensions a
 #endif
 
 // UI tour experience.
-pref("browser.uitour.enabled", true);
+pref("browser.uitour.enabled", false);
 pref("browser.uitour.loglevel", "Error");
 pref("browser.uitour.url", "https://www.mozilla.org/%LOCALE%/firefox/%VERSION%/tour/");
 // How long to show a Hearbeat survey (two hours, in seconds)
@@ -1183,7 +1183,7 @@ pref("browser.tabs.groups.alternateMenu", false);
 // Bug 2052293: temporarily disabled while tab groups move away from the list all tabs menu.
 pref("browser.tabs.groups.onboardingCallouts.enabled", false);
 
-pref("browser.tabs.groups.smart.enabled", true);
+pref("browser.tabs.groups.smart.enabled", false);
 
 pref("browser.tabs.notes.enabled", false);
 
@@ -1657,7 +1657,7 @@ pref("browser.zoom.full", true);
 pref("browser.zoom.updateBackgroundTabs", true);
 
 // The breakpad report server to link to in about:crashes
-pref("breakpad.reportURL", "https://crash-stats.mozilla.org/report/index/");
+pref("breakpad.reportURL", "");
 
 // URL for "Learn More" for DataCollection
 pref("toolkit.datacollection.infoURL",
@@ -1802,13 +1802,13 @@ pref("services.sync.prefs.sync.browser.menu.showViewImageInfo", true);
 pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", true);
 pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", true);
 pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.showSearch", true);
-pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.showSponsored", true);
-pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.showSponsoredTopSites", true);
-pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.topsites", true);
+pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.showSponsored", false);
+pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.showSponsoredTopSites", false);
+pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.topsites", false);
 pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.topSitesRows", true);
-pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.section.topstories", true);
-pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.section.topstories.rows", true);
-pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.section.highlights", true);
+pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.section.topstories", false);
+pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.section.topstories.rows", false);
+pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.section.highlights", false);
 // Some linux distributions disable all highlights by default.
 pref("services.sync.prefs.sync-seen.browser.newtabpage.activity-stream.section.highlights", false);
 pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.section.highlights.includeVisited", true);
@@ -1935,9 +1935,9 @@ pref("prompts.defaultModalType", 3);
 // Whether to use the discrete Top Sites component.
 pref("browser.topsites.component.enabled", false);
 
-pref("browser.topsites.useRemoteSetting", true);
+pref("browser.topsites.useRemoteSetting", false);
 // Fetch sponsored Top Sites from Mozilla Tiles Service (Contile)
-pref("browser.topsites.contile.enabled", true);
+pref("browser.topsites.contile.enabled", false);
 pref("browser.topsites.contile.endpoint", "https://contile.services.mozilla.com/v1/tiles");
 
 // The base URL for the Quick Suggest anonymizing proxy. To make a request to
@@ -2045,7 +2045,7 @@ pref("browser.newtabpage.activity-stream.newNewtabExperience.colors", "#004CA4,#
 pref("browser.newtabpage.activity-stream.fxaccounts.endpoint", "https://accounts.firefox.com/");
 
 // The pref that controls if the search shortcuts experiment is on
-pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts", true);
+pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts", false);
 
 // ASRouter provider configuration
 pref("browser.newtabpage.activity-stream.asrouter.providers.message-groups", "{\"id\":\"message-groups\",\"enabled\":true,\"type\":\"remote-settings\",\"collection\":\"message-groups\",\"updateCycleInMs\":3600000}");
@@ -2063,7 +2063,7 @@ pref("messaging-system.askForFeedback", true);
 pref("browser.newtabpage.activity-stream.asrouter.useRemoteL10n", true);
 
 // These prefs control if Discovery Stream is enabled.
-pref("browser.newtabpage.activity-stream.discoverystream.enabled", true);
+pref("browser.newtabpage.activity-stream.discoverystream.enabled", false);
 pref("browser.newtabpage.activity-stream.discoverystream.hardcoded-basic-layout", false);
 pref("browser.newtabpage.activity-stream.discoverystream.hybridLayout.enabled", false);
 pref("browser.newtabpage.activity-stream.discoverystream.hideCardBackground.enabled", false);
@@ -2334,33 +2334,33 @@ pref(
   '{"visibilityPref":"browser.resourceMonitor.enabled"}'
 );
 
-pref("browser.ml.chat.enabled", true);
+pref("browser.ml.chat.enabled", false);
 pref("browser.ml.chat.hideLocalhost", true);
 pref("browser.ml.chat.maxLength", 7000);
-pref("browser.ml.chat.menu", true);
-pref("browser.ml.chat.page", true);
-pref("browser.ml.chat.page.footerBadge", true);
-pref("browser.ml.chat.page.menuBadge", true);
+pref("browser.ml.chat.menu", false);
+pref("browser.ml.chat.page", false);
+pref("browser.ml.chat.page.footerBadge", false);
+pref("browser.ml.chat.page.menuBadge", false);
 pref("browser.ml.chat.prompt.prefix", '{"l10nId":"genai-prompt-prefix-selection"}');
 pref("browser.ml.chat.prompts.0", '{"id":"summarize","l10nId":"genai-prompts-summarize"}');
 pref("browser.ml.chat.prompts.1", '{"id":"explain","l10nId":"genai-prompts-explain","targeting":"contentType != \'page\'"}');
 pref("browser.ml.chat.prompts.3", '{"id":"quiz","l10nId":"genai-prompts-quiz","targeting":"(!provider|regExpMatch(\'gemini\') || region == \'US\') && contentType != \'page\'"}');
 pref("browser.ml.chat.prompts.4", '{"id":"proofread", "l10nId":"genai-prompts-proofread","targeting":"contentType != \'page\'"}');
 pref("browser.ml.chat.provider", "");
-pref("browser.ml.chat.shortcuts", true);
-pref("browser.ml.chat.shortcuts.custom", true);
-pref("browser.ml.chat.shortcuts.smartwindow", true);
+pref("browser.ml.chat.shortcuts", false);
+pref("browser.ml.chat.shortcuts.custom", false);
+pref("browser.ml.chat.shortcuts.smartwindow", false);
 pref("browser.ml.chat.shortcuts.longPress", 60000);
 pref("browser.ml.chat.shortcuts.debounce", 200);
 pref("browser.ml.chat.shortcut.onboardingMouseoverCount", 0);
-pref("browser.ml.chat.sidebar", true);
+pref("browser.ml.chat.sidebar", false);
 
 pref("browser.ml.linkPreview.allowedLanguages", "en");
-pref("browser.ml.linkPreview.blockListEnabled", true);
+pref("browser.ml.linkPreview.blockListEnabled", false);
 pref("browser.ml.linkPreview.collapsed", false);
-pref("browser.ml.linkPreview.enabled", true);
+pref("browser.ml.linkPreview.enabled", false);
 pref("browser.ml.linkPreview.ignoreMs", 2000);
-pref("browser.ml.linkPreview.longPress", true);
+pref("browser.ml.linkPreview.longPress", false);
 pref("browser.ml.linkPreview.longPressMs", 1000);
 pref("browser.ml.linkPreview.noKeyPointsRegions", "");
 pref("browser.ml.linkPreview.optin", false);
@@ -2477,7 +2477,7 @@ pref("browser.uiCustomization.state", "");
 
 // If set to false, FxAccounts and Sync will be unavailable.
 // A restart is mandatory after flipping that preference.
-pref("identity.fxaccounts.enabled", true);
+pref("identity.fxaccounts.enabled", false);
 
 // The remote FxA root content URL. Must use HTTPS.
 pref("identity.fxaccounts.remote.root", "https://accounts.firefox.com/");

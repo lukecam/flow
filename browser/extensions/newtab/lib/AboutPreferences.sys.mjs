@@ -564,18 +564,6 @@ export class AboutPreferences {
       },
     });
 
-    // Support Firefox: sponsored content
-    Preferences.addSetting({
-      id: "supportFirefox",
-      pref: "browser.newtabpage.activity-stream.showSponsoredCheckboxes",
-      deps: ["sponsoredShortcuts", "sponsoredStories", ...firefoxHomeDeps],
-      disabled: deps => !firefoxHomeActive(deps),
-      onUserChange(value, { sponsoredShortcuts, sponsoredStories }) {
-        // When supportFirefox changes, automatically update child preferences to match
-        sponsoredShortcuts.value = !!value;
-        sponsoredStories.value = !!value;
-      },
-    });
     Preferences.addSetting({
       id: "topsitesEnabled",
       pref: "browser.newtabpage.activity-stream.feeds.topsites",
@@ -592,12 +580,6 @@ export class AboutPreferences {
       deps: ["systemTopstories", "stories"],
       visible: ({ systemTopstories }) => !!systemTopstories.value,
       disabled: ({ stories }) => !stories.value,
-    });
-    // Not disabled when Firefox Home is off — the promo remains visible
-    // regardless of the homepage setting.
-    Preferences.addSetting({
-      id: "supportFirefoxPromo",
-      deps: ["supportFirefox"],
     });
 
     // Recent activity
@@ -770,39 +752,6 @@ export class AboutPreferences {
               controlAttrs: {
                 href: HOME_CUSTOMIZE_TOPICS_URL,
               },
-            },
-          ],
-        },
-        {
-          id: "supportFirefox",
-          subcategory: "support-firefox",
-          l10nId: "home-prefs-support-firefox-header-srd",
-          control: "moz-toggle",
-          items: [
-            {
-              id: "sponsoredShortcuts",
-              l10nId: "home-prefs-shortcuts-by-option-sponsored-srd",
-            },
-            {
-              id: "sponsoredStories",
-              l10nId: "home-prefs-recommended-by-option-sponsored-stories-srd",
-            },
-            {
-              id: "supportFirefoxPromo",
-              l10nId: "home-prefs-mission-message2",
-              control: "moz-promo",
-              options: [
-                {
-                  control: "a",
-                  l10nId: "home-prefs-mission-message-learn-more-link-srd",
-                  slot: "support-link",
-                  controlAttrs: {
-                    is: "moz-support-link",
-                    "support-page": "sponsor-privacy",
-                    "utm-content": "inproduct",
-                  },
-                },
-              ],
             },
           ],
         },

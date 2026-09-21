@@ -531,7 +531,7 @@ pref("toolkit.telemetry.server_owner", "Mozilla");
 // i.e. dynamically constructed SQL strings or SQL executed by addons against addon DBs
 pref("toolkit.telemetry.debugSlowSql", false);
 // Whether to use the unified telemetry behavior, requires a restart.
-pref("toolkit.telemetry.unified", true);
+pref("toolkit.telemetry.unified", false);
 
 // DAP related preferences
 pref("toolkit.telemetry.dap.logLevel", "Warn");
@@ -1728,7 +1728,7 @@ pref("font.name-list.monospace.x-math", "monospace");
 pref("font.blacklist.underline_offset", "FangSong,Gulim,GulimChe,MingLiU,MingLiU-ExtB,MingLiU_HKSCS,MingLiU-HKSCS-ExtB,MS Gothic,MS Mincho,MS PGothic,MS PMincho,MS UI Gothic,PMingLiU,PMingLiU-ExtB,SimHei,SimSun,SimSun-ExtB,Hei,Kai,Apple LiGothic,Apple LiSung,Osaka");
 
 // security-sensitive dialogs should delay button enabling. In milliseconds.
-pref("security.dialog_enable_delay", 1000);
+pref("security.dialog_enable_delay", 0);
 
 #ifdef NIGHTLY_BUILD
   // Disallow web documents loaded with the SystemPrincipal
@@ -3134,7 +3134,7 @@ pref("extensions.webextensions.ExtensionStorageIDB.enabled", true);
 // Whether to allow the inline options browser in HTML about:addons page.
 pref("extensions.htmlaboutaddons.inline-options.enabled", true);
 // Show recommendations on the extension and theme list views.
-pref("extensions.htmlaboutaddons.recommendations.enabled", true);
+pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 
 // Whether the Nova Themes picker should be enabled in the about:addons page.
 // (disabled by default here, so that other applications embedding Gecko
@@ -3188,7 +3188,7 @@ pref("dom.webnotifications.requireinteraction.count", 3);
 // timeout for black screen in fullscreen transition, unit: ms
 pref("full-screen-api.transition.timeout", 1000);
 // time for the warning box stays on the screen before sliding out, unit: ms
-pref("full-screen-api.warning.timeout", 3000);
+pref("full-screen-api.warning.timeout", 0);
 pref("full-screen-api.keyboardlock-warning.timeout", 4000);
 // delay for the warning box to show when pointer stays on the top, unit: ms
 pref("full-screen-api.warning.delay", 500);
@@ -3739,7 +3739,7 @@ pref("toolkit.aboutProcesses.profileDuration", 5);
 pref("toolkit.legacyUserProfileCustomizations.stylesheets", false);
 
 #ifdef MOZ_DATA_REPORTING
-  pref("datareporting.policy.dataSubmissionEnabled", true);
+  pref("datareporting.policy.dataSubmissionEnabled", false);
   pref("datareporting.policy.dataSubmissionPolicyNotifiedTime", "0");
   pref("datareporting.policy.dataSubmissionPolicyAcceptedVersion", 0);
   pref("datareporting.policy.currentPolicyVersion", 2);
@@ -3755,8 +3755,8 @@ pref("toolkit.legacyUserProfileCustomizations.stylesheets", false);
 
     // Health Report is enabled by default on all channels.
     // Do note that the toggle on Fenix and Focus does NOT reflect to this pref.
-    pref("datareporting.healthreport.uploadEnabled", true);
-    pref("datareporting.usage.uploadEnabled", true);
+    pref("datareporting.healthreport.uploadEnabled", false);
+    pref("datareporting.usage.uploadEnabled", false);
   #endif
 #endif
 
@@ -3787,7 +3787,7 @@ pref("services.common.log.logger.tokenserverclient", "Debug");
   pref("services.sync.engine.history", true);
   pref("services.sync.engine.passwords", true);
   pref("services.sync.engine.prefs", true);
-  pref("services.sync.engine.tabs", true);
+  pref("services.sync.engine.tabs", false);
   pref("services.sync.engine.tabs.filteredSchemes", "about|resource|chrome|file|blob|moz-extension|data");
 
   // The addresses and CC engines might not actually be available at all.
